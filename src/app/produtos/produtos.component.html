@@ -1,0 +1,25 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="container">
+    <h1>LISTA DE PRODUTOS</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Álbum</th>
+            <th>Artista</th>
+            <th>Gênero</th>
+            <th>Lançamento</th>
+            <th>Editar</th>
+        </tr>
+        
+        <tr *ngFor="let produto of produtos">
+            <td>{{produto.id}}</td>
+            <td>{{produto.album}}</td>
+            <td>{{produto.artista}}</td>
+            <td>{{produto.genero}}</td>
+            <td>{{produto.lancamento}}</td>
+            <td><button class="btn-produto" [class.selected]="produto == selectedProduto" type="button" (click)="onSelect(produto)"><mat-icon>edit</mat-icon></button></td>
+        </tr>
+    </table>
+</div>
+
+<app-produto-detail [produto]="selectedProduto"></app-produto-detail>

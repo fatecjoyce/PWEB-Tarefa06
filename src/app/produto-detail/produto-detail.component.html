@@ -1,0 +1,26 @@
+<div class="container" style="margin-top: 40em;">
+    <div *ngIf="produto">
+        <h2>{{produto.album | uppercase}} - Detalhes</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Álbum</th>
+                <th>Artista</th>
+                <th>Gênero</th>
+                <th>Lançamento</th>
+            </tr>
+            <tr>
+                <td>ID: {{produto.id}}</td>
+                <td><input id="album" [(ngModel)]="produto.album" placeholder="Álbum"></td>
+                <td><input id="artista" [(ngModel)]="produto.artista" placeholder="Artista"></td>
+                <td><input id="genero" [(ngModel)]="produto.genero" placeholder="Gênero"></td>
+                <td><input id="lancamento" [(ngModel)]="produto.lancamento" placeholder="Lançamento"></td>
+            </tr> 
+        </table>
+    </div> 
+    <br>
+    <br>   
+</div>    
+    
+    
+    
